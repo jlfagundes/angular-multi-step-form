@@ -15,7 +15,7 @@
         <label class="label" for="lastName">Last Name: </label>
         <input class="input" id="lastName" name="lastName" type="text" required minlength="3"
                #lastName="ngModel" [class.is-danger]="f.submitted && lastName.invalid"
-               placeholder="Last Name" [(ngModel)]="userFormModel.userModel.lastName />
+               placeholder="Last Name" [(ngModel)]="userFormModel.userModel.lastName" />
         <p class="help is-danger" *ngIf="f.submitted && lastName.invalid">Last Name is invalid.</p>
       </div>
 
@@ -42,7 +42,7 @@
       </div>
     </form>
 
-    <app-form-status currentStep="1"></app-form-status>
+    <app-form-status [currentStep]="1"></app-form-status>
 
   </div>
 </div>
